@@ -3,7 +3,6 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/src/ScrollTrigger'
 
 export default function Designer() {
-
   gsap.registerPlugin(ScrollTrigger)
 
   useLayoutEffect(() => {
@@ -32,6 +31,8 @@ export default function Designer() {
         scrub: true,
       }
     })
+
+    if(document.documentElement.clientWidth > 1000){
       gsap.to('.carousel', 2.5, {
         y: 250,
         scrollTrigger: {
@@ -40,6 +41,7 @@ export default function Designer() {
           scrub: true,
         },
       })
+    }
   }, [])
 
   return (

@@ -1,4 +1,4 @@
-import React, {useLayoutEffect} from 'react'
+import React, {useEffect} from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/src/ScrollTrigger'
 import { updateStorageItem } from './SideBar'
@@ -6,7 +6,8 @@ import { updateStorageItem } from './SideBar'
 
 export default function Footer() {
   gsap.registerPlugin(ScrollTrigger)
-    useLayoutEffect(() => {
+    useEffect(() => {
+      if(document.documentElement.clientWidth > 1000){
         gsap.to('.white-text-two', 1.5,{
           width: '100%',
           stagger: {
@@ -20,8 +21,8 @@ export default function Footer() {
           },
           ease: 'none'
         })
-    
-    }, [])
+      }
+    })
 
   return (
     <div className='footer'>
