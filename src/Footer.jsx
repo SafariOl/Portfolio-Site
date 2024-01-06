@@ -54,12 +54,12 @@ export default function Footer() {
               gap: '20px'
               }}>
               <div>
-                <a onClick={() => updateStorageItem(0)} href="/guide"><p>Style Guide</p></a>
-                <a onClick={() => updateStorageItem(1)} href="/help"><p>Instructions</p></a>
+                <a onClick={() => updateStorageItem(0)} href="guide"><p>Style Guide</p></a>
+                <a onClick={() => updateStorageItem(1)} href="help"><p>Instructions</p></a>
               </div>
               <div>
-                <a onClick={() => updateStorageItem(2)} href="/licensing"><p>Licensing</p></a>
-                <a onClick={() => updateStorageItem(3)} href="/log"><p>Change Log</p></a>
+                <a onClick={() => updateStorageItem(2)} href="licensing"><p>Licensing</p></a>
+                <a onClick={() => updateStorageItem(3)} href="log"><p>Change Log</p></a>
               </div>
             </div>
             <a href="#"><p>Powered by WEBFLOW</p></a>
