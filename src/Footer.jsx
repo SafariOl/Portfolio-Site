@@ -49,11 +49,7 @@ export default function Footer() {
         <div style={{width: '110%'}} className="line"></div>
         <div className="footer__services">
             <a href="#"><p>Created by SAFARIOl</p></a>
-            <div style={
-              {display: 'flex',
-              alignItems: 'center',
-              gap: '20px'
-              }}>
+            <div className='footer__links'>
               <div>
                 <a onClick={() => updateStorageItem(0)} href="guide"><p>Style Guide</p></a>
                 <a onClick={() => updateStorageItem(1)} href="help"><p>Instructions</p></a>

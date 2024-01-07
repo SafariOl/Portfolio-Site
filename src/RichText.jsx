@@ -27,7 +27,7 @@ export default function RichText() {
                 <blockquote>
                     Headings, paragraphs, blockquotes, figures, images, and figure captions can all be styled after a class is added to the rich text element using the "When inside of" nested selector system.
                 </blockquote>
-                <img style={{maxWidth: 407, transform: 'translateX(-50%)', position: 'relative', left: '50%'}} src="https://assets-global.website-files.com/646270ca8cac509e47f4febc/646270ca8cac509e47f4fef2_Blog%20Image%2005.jpg" alt="#" />
+                <img className='image__caption' style={{}} src="https://assets-global.website-files.com/646270ca8cac509e47f4febc/646270ca8cac509e47f4fef2_Blog%20Image%2005.jpg" alt="#" />
                 <figcaption style={{textAlign: 'center', marginBottom: 50}}>CAPTION</figcaption>
             </div>
         </div>

@@ -16,7 +16,7 @@ import Romans from './Romans'
 export default function App() {
   
   return (
-    <>
+    <div className='wrapper'>
       <NavBar />
       <Router>
           <Routes>
@@ -35,6 +35,6 @@ export default function App() {
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   )
 }
