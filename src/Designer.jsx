@@ -1,47 +1,81 @@
-import React, {useLayoutEffect, useEffect} from 'react'
+import React, {useEffect} from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/src/ScrollTrigger'
 
 export default function Designer() {
   gsap.registerPlugin(ScrollTrigger)
-
-  useLayoutEffect(() => {
-    gsap.from('.hero', .5,{
-      opacity: 0,
-      y: 100,
-      rotateY: 180,
-      color: '#63007e',
-      stagger:{
-        amount: .4
-      }
-    })
-  }, [])
-
+  
   useEffect(() => {
-    gsap.to('.hero', 1,{
-      y: 100,
-      stagger: {
-        amount: .6
-      },
-      color: '#200e26',
-      scrollTrigger: {
-        trigger: '.hero',
-        start: 'top 15%',
-        end: '+=300',
-        scrub: true,
-      }
-    })
+    ScrollTrigger.matchMedia({
+      "(min-width: 768px)": function(){
+        gsap.to('.carousel', 3.5, {
+          y: 250,
+          scrollTrigger: {
+            trigger: '.designer__block',
+            start: 'top 20%',
+            scrub: true,
+          },
+        })
+        gsap.from('.hero', .5,{
+          opacity: 0,
+          y: 100,
+          rotateY: 180,
+          color: '#63007e',
+          stagger:{
+            amount: .4
+          }
+        })
 
-    if(document.documentElement.clientWidth > 1000){
-      gsap.to('.carousel', 2.5, {
-        y: 250,
-        scrollTrigger: {
-          trigger: '.designer__block',
-          start: 'top 20%',
-          scrub: true,
-        },
-      })
-    }
+        gsap.to('.hero', 1,{
+          y: 100,
+          stagger: {
+            amount: .6
+          },
+          color: '#200e26',
+          scrollTrigger: {
+            trigger: '.hero',
+            start: 'top 15%',
+            end: '+=300',
+            scrub: true,
+          }
+        })
+    }})
+
+    ScrollTrigger.matchMedia({
+      "(max-width: 768px)": function(){
+        gsap.to('.carousel', 3.5, {
+          y: 100,
+          scrollTrigger: {
+            trigger: '.designer__block',
+            start: 'top 20%',
+            scrub: true,
+          },
+        })
+        gsap.from('.hero', .5,{
+          opacity: 0,
+          y: 50,
+          rotateY: 180,
+          color: '#63007e',
+          stagger:{
+            amount: .4
+          }
+        })
+
+        gsap.to('.hero', 1,{
+          y: 70,
+          stagger: {
+            amount: .6
+          },
+          color: '#200e26',
+          scrollTrigger: {
+            trigger: '.hero',
+            start: 'top 15%',
+            end: '+=300',
+            scrub: true,
+          }
+        })
+      }})
+    
   }, [])
 
   return (

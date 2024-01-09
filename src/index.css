@@ -100,6 +100,9 @@ a{
 .navigate{
   position: fixed;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: -135%;
   width: 100vw;
   min-height: 100vh;
@@ -298,7 +301,6 @@ a{
   width: 0;
   z-index: 6;
   overflow: hidden;
-  transition: var(--bezier);
 }
 
 .about img{
@@ -946,7 +948,7 @@ blockquote{
     display: none;
   }
   .designer__block p {
-    font-size: 16px;
+    font-size: 14px;
   }
   .work-page__texts {
     max-width: 86%;
@@ -957,13 +959,14 @@ blockquote{
   }
 
   h2{
-    font-size: 35px;
+    font-size: 60px;
   }
   h3{
     font-size: 32px;
   }
   .work-page{
     gap: 30px;
+    margin-top: 20%;
   }
   .about{
     padding: 40px 62px 0;
@@ -973,9 +976,10 @@ blockquote{
   }
   .footer__services p{
     font-size: 12px;
+    text-align: center;
   }
   .footer__contacts a {
-    font-size: 29px;
+    font-size: 25px;
   }
   .footer__contacts{
     margin-top: 70px;
@@ -994,7 +998,7 @@ blockquote{
     font-size: 70px;
   }
   .work__block h2 {
-    font-size: 53px;
+    font-size: 45px;
   }
   .work__block {
     width: 65vw;
@@ -1004,6 +1008,46 @@ blockquote{
     padding: 0 20px 0 0;
   }
   .about__text, .footer__text {
-    gap: 24px;
+    gap: 30px;
+  }
+  .work{
+    transform: rotate(0);
+    margin: 150px 20px;
+  }
+  .work__block{
+    margin-right: 0;
+  }
+  .row {
+    gap: 15px;
+  }
+  .slide-image {
+    width: 89vw;
+  }
+  .title-h2{
+    font-size: 36px;
+  }
+  .navigate a{
+    font-size: 120px;
+  }
+  .navigate ul{
+    gap: 20px;
+  }
 }
+
+@media (max-width: 400px){
+  .navigate a{
+    font-size: 87px;
+  }
+  h2{
+    font-size: 37px;
+  }
+  blockquote {
+    font-size: 18px;
+  }
+  h1{
+    font-size: 67px;
+  }
+  .slide-image {
+    width: 125vw;
+  }
 }

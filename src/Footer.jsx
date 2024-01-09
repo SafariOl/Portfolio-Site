@@ -6,23 +6,25 @@ import { updateStorageItem } from './SideBar'
 
 export default function Footer() {
   gsap.registerPlugin(ScrollTrigger)
-    useEffect(() => {
-      if(document.documentElement.clientWidth > 1000){
-        gsap.to('.white-text-two', 1.5,{
-          width: '100%',
+  useEffect(() => {
+    ScrollTrigger.matchMedia({
+      "(min-width: 300px)": function(){
+        gsap.to('.white-text-two', 2.5,{
+          width: '110%',
           stagger: {
-            amount: .5
+            amount: .6
           },
           scrollTrigger:{
             trigger: '.footer',
             start: 'top 60%',
-            end: '+=90%',
+            end: '+=235',
             scrub: true,
           },
-          ease: 'none'
         })
       }
     })
+      
+  })
 
   return (
     <div className='footer'>

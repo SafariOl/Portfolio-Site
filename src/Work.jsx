@@ -6,21 +6,25 @@ export default function Work({titlePage, elem}) {
     gsap.registerPlugin(ScrollTrigger)
 
     useEffect(() => {
-        gsap.to('.work__block ', .5, {
-            y: 30,
-            height: 130,
-            opacity: 1,
-            stagger: {
-                amount: .2
-            },
-            scrollTrigger: {
-                trigger: '.work__block',
-                scrub: true,
-                start: 'top 70%',
-                end: '+=300'
+        ScrollTrigger.matchMedia({
+            "(min-width: 300px)": function(){
+                gsap.to('.work__block ', .5, {
+                    y: 30,
+                    height: 130,
+                    opacity: 1,
+                    stagger: {
+                        amount: .2
+                    },
+                    scrollTrigger: {
+                        trigger: '.work__block',
+                        scrub: true,
+                        start: 'top 70%',
+                        end: '+=300'
+                    }
+                })
             }
         })
-    }, [])
+    })
 
     
     const obj = {
@@ -36,9 +40,8 @@ export default function Work({titlePage, elem}) {
             }else{
                 link.classList.remove('active')
             }
-            console.log(titlePage)
         })
-    }, [])
+    })
         
 
     function mouseEnter (order) {
@@ -99,11 +102,11 @@ export default function Work({titlePage, elem}) {
                 </div>
             </div>
             <div className="work__images">
-                    <img className='work__image' src="https://assets-global.website-files.com/65455474e0ea54684cf7d9cf/65455474e0ea54684cf7da2f_max-andrey-TlRQin0iwjE-unsplash-min.jpg" alt="#" />
-                    <img className='work__image' src="https://assets-global.website-files.com/65455474e0ea54684cf7d9cf/65455474e0ea54684cf7da30_martin-katler-rjASNUw3SDE-unsplash-min.jpg" alt="#" />
-                    <img className='work__image' src="https://assets-global.website-files.com/65455474e0ea54684cf7d9cf/65455474e0ea54684cf7da31_trinity-nguyen-_yMRmwr2OY8-unsplash-min.jpg" alt="#" />
-                    <img className='work__image' src="https://assets-global.website-files.com/65455474e0ea54684cf7d9cf/65455474e0ea54684cf7da32_sarath-p-raj-p8GmCEgSmmo-unsplash-min.jpg" alt="#" />
-                    <img className='work__image' src="https://assets-global.website-files.com/65455474e0ea54684cf7d9cf/65455474e0ea54684cf7da33_oguz-yagiz-kara-OhC9aDrGsHU-unsplash-min.jpg" alt="#" />
+                <img className='work__image' src="https://assets-global.website-files.com/65455474e0ea54684cf7d9cf/65455474e0ea54684cf7da2f_max-andrey-TlRQin0iwjE-unsplash-min.jpg" alt="#" />
+                <img className='work__image' src="https://assets-global.website-files.com/65455474e0ea54684cf7d9cf/65455474e0ea54684cf7da30_martin-katler-rjASNUw3SDE-unsplash-min.jpg" alt="#" />
+                <img className='work__image' src="https://assets-global.website-files.com/65455474e0ea54684cf7d9cf/65455474e0ea54684cf7da31_trinity-nguyen-_yMRmwr2OY8-unsplash-min.jpg" alt="#" />
+                <img className='work__image' src="https://assets-global.website-files.com/65455474e0ea54684cf7d9cf/65455474e0ea54684cf7da32_sarath-p-raj-p8GmCEgSmmo-unsplash-min.jpg" alt="#" />
+                <img className='work__image' src="https://assets-global.website-files.com/65455474e0ea54684cf7d9cf/65455474e0ea54684cf7da33_oguz-yagiz-kara-OhC9aDrGsHU-unsplash-min.jpg" alt="#" />
             </div>
         </div>
     </div>
