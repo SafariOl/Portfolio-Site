@@ -1,10 +1,12 @@
 import React from 'react'
 import Work from './Work'
 import WorkPageText from './WorkPageText'
+import { FaArrowLeft } from 'react-icons/fa'
 
 export default function FeelingY() {
   return (
     <div>
+        <a style={{position: 'absolute', fontSize: 30, top: 30, left: 30, color: '#fff'}} href="/"><FaArrowLeft/></a>
         <div className='work-page'>
             <div className="work-page__image">
                 <img src="https://assets-global.website-files.com/65455474e0ea54684cf7d9cf/65455474e0ea54684cf7da2f_max-andrey-TlRQin0iwjE-unsplash-min.jpg" alt="#" />

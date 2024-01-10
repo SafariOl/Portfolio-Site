@@ -92,7 +92,6 @@ a{
 .wrapper{
   width: 100vw;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 /* NAV-BAR */
@@ -357,15 +356,6 @@ a{
   border-bottom: 1px solid #646362;
 }
 
-@media (hover: hover){
-  .work__block:hover{
-    width: calc(40vw - 50px);
-    margin-left: 50px;
-    color: var(--white);
-    border-bottom: 1px solid var(--white);
-  }
-}
-
 .work__image{
   position: absolute;
   top: 25%;
@@ -402,6 +392,11 @@ a{
 .work__items{
   display: flex;
   height: 0;
+}
+
+.work__items__image{
+  display: grid;
+  place-items: center;
 }
 
 /* FOOTER */
@@ -475,14 +470,6 @@ a{
 .footer__services a p{
   margin: 0;
   transition: all .3s ease;
-}
-
-@media (hover:hover){
-  .footer__services a p:hover{
-    color: var(--white);
-    font-size: 18.5px;
-    font-weight: 700;
-  }
 }
 
 .footer__links{
@@ -781,19 +768,14 @@ blockquote{
   font-size: 15px;
 }
 
-.back-button:hover p{
-  color: #ff5500;
-  font-weight: 700;
-  font-size: 18px;
-  transition: var(--transition);
-}
-
 .image__caption{
   width: 40vw;
   transform: translateX(-50%);
   position: relative;
   left: 50%;
 }
+
+
 
 @media (max-width: 1200px){
   .carousel span:nth-child(2){
@@ -802,12 +784,18 @@ blockquote{
 }
 
 @media (max-width: 992px){
-  
+  .footer__services a p {
+    color: var(--white);
+  }
+  aside h4{
+    line-height: 0.6;
+  }
   .work{
     transform: rotate(0);
     margin: 130px 20px 0;
   }
   .work__block{
+    margin-bottom: 20px;
     height: auto;
     border: none;
     opacity: 1;
@@ -817,17 +805,13 @@ blockquote{
     display: flex;
     height: auto;
   }
-  .work__block:hover{
-    width: 50vw;
-    margin-left: 0;
-  }
   .work__items__block{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
     border-bottom: 1px solid var(--white);
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
   .work__image{
     position: inherit;
@@ -922,6 +906,7 @@ blockquote{
     border-bottom: 3px solid #ff5500;
   }
   aside {
+    position: relative;
     padding: 0 10px;
     inset: 0%;
     width: 100vw;
@@ -1093,6 +1078,26 @@ blockquote{
     font-size: 67px;
   }
   .slide-image {
-    width: 125vw;
+    width: 100vw;
+  }
+}
+
+@media (min-width: 992px){
+  .work__block:hover{
+    width: calc(40vw - 50px);
+    margin-left: 50px;
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+  }
+  .footer__services a p:hover{
+    color: var(--white);
+    font-size: 18.5px;
+    font-weight: 700;
+  }
+  .back-button:hover p{
+    color: #ff5500;
+    font-weight: 700;
+    font-size: 18px;
+    transition: var(--transition);
   }
 }
