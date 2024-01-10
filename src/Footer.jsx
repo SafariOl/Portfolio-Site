@@ -8,17 +8,33 @@ export default function Footer() {
   gsap.registerPlugin(ScrollTrigger)
   useEffect(() => {
     ScrollTrigger.matchMedia({
-      "(min-width: 300px)": function(){
+      "(min-width: 768px)": function(){
         gsap.to('.white-text-two', 2.5,{
           width: '110%',
           stagger: {
-            amount: .6
+            amount: .8
           },
           scrollTrigger:{
             trigger: '.footer',
             start: 'top 60%',
-            end: '+=235',
-            scrub: true,
+            end: '+=600',
+            scrub: 1,
+          },
+        })
+      }
+    })
+    ScrollTrigger.matchMedia({
+      "(max-width: 768px)": function(){
+        gsap.to('.white-text-two', 2.5,{
+          width: '110%',
+          stagger: {
+            amount: .8
+          },
+          scrollTrigger:{
+            trigger: '.footer',
+            start: 'top 70%',
+            end: '+=200',
+            scrub: 1,
           },
         })
       }

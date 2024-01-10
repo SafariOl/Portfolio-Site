@@ -25,23 +25,6 @@ export default function Work({titlePage, elem}) {
             }
         })
 
-        ScrollTrigger.matchMedia({
-            "(max-width: 982px)": function(){
-                const works = document.querySelectorAll('.work__items__block')
-                const worksImages = document.querySelectorAll('.work__image')
-                works.forEach((block, idx) => {
-                    gsap.to(worksImages[idx], 1, {
-                        maxHeight: 370,
-                        scrollTrigger: {
-                            trigger: block,
-                            scrub: true,
-                            start: 'top 60%',
-                            end: '+=300'
-                        }
-                    })
-                })
-            }
-        })
     })
 
     

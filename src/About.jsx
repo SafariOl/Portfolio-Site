@@ -7,13 +7,35 @@ export default function About() {
   const bottomImg = useRef(null)
   gsap.registerPlugin(ScrollTrigger)
   useEffect(() => {
-
     ScrollTrigger.matchMedia({
       "(min-width: 300px)": function(){
-          gsap.to('.white-text', 1.5,{
-            width: '110%',
+        gsap.to('.top-img', {
+          scrollTrigger: {
+            trigger: '.about',
+            start: 'top center',
+            end: 'end -=100%',
+            scrub: true,
+          },
+          x: 100,
+        })
+        gsap.to(bottomImg.current, {
+          scrollTrigger: {
+            trigger: '.about',
+            start: 'top 40%',
+            end: 'end -=100%',
+            scrub: true,
+          },
+          y: -100,
+        })
+      }
+    })
+
+    ScrollTrigger.matchMedia({
+      "(max-width: 768px)": function(){
+          gsap.to('.white-text', 3.5,{
+            width: '150%',
             stagger: {
-              amount: 1
+              amount: 1.5
             },
             scrollTrigger:{
               trigger: '.about',
@@ -22,24 +44,24 @@ export default function About() {
               scrub: 1,
             }
           })
-          gsap.to('.top-img', {
-            scrollTrigger: {
-              trigger: '.about',
-              start: 'top center',
-              end: 'end -=100%',
-              scrub: true,
+          
+      }
+    })
+    ScrollTrigger.matchMedia({
+      "(min-width: 768px)": function(){
+          gsap.to('.white-text', 3.5,{
+            width: '110%',
+            stagger: {
+              amount: 1.5
             },
-            x: 100,
-          })
-          gsap.to(bottomImg.current, {
-            scrollTrigger: {
+            scrollTrigger:{
               trigger: '.about',
-              start: 'top 40%',
-              end: 'end -=100%',
-              scrub: true,
-            },
-            y: -100,
+              start: 'top 60%',
+              end: '+=90%',
+              scrub: 1,
+            }
           })
+          
       }
     })
   })

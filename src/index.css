@@ -232,6 +232,7 @@ a{
   width: 40vw;
   position: relative;
   left: 5%;
+  border: 2px solid var(--white);
 }
 
 .carousel{
@@ -356,11 +357,13 @@ a{
   border-bottom: 1px solid #646362;
 }
 
-.work__block:hover{
-  width: calc(40vw - 50px);
-  margin-left: 50px;
-  color: var(--white);
-  border-bottom: 1px solid var(--white);
+@media (hover: hover){
+  .work__block:hover{
+    width: calc(40vw - 50px);
+    margin-left: 50px;
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+  }
 }
 
 .work__image{
@@ -474,10 +477,12 @@ a{
   transition: all .3s ease;
 }
 
-.footer__services a p:hover{
-  color: var(--white);
-  font-size: 18.5px;
-  font-weight: 700;
+@media (hover:hover){
+  .footer__services a p:hover{
+    color: var(--white);
+    font-size: 18.5px;
+    font-weight: 700;
+  }
 }
 
 .footer__links{
@@ -797,6 +802,7 @@ blockquote{
 }
 
 @media (max-width: 992px){
+  
   .work{
     transform: rotate(0);
     margin: 130px 20px 0;
@@ -829,7 +835,7 @@ blockquote{
     height: 100%;
     object-fit: cover;
     max-width: 250px;
-    max-height: 0;
+    max-height: 370px;
     opacity: 1;
     transform: perspective(0) rotateX(0);
     transition: all .5s ease;

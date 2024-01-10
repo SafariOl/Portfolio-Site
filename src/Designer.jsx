@@ -47,7 +47,7 @@ export default function Designer() {
           y: 100,
           scrollTrigger: {
             trigger: '.designer__block',
-            start: 'top 20%',
+            start: 'top 50%',
             scrub: true,
           },
         })
