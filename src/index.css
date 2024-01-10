@@ -92,7 +92,6 @@ a{
 .wrapper{
   max-width: 100vw;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 /* NAV-BAR */
@@ -863,6 +862,9 @@ blockquote{
 }
 
 @media (max-width: 768px){
+  .wrapper{
+    overflow-x: hidden;
+  }
   .block:not(:last-child) {
     margin-bottom: 10px;
   }
