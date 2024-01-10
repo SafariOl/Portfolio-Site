@@ -17,7 +17,6 @@ export default function App() {
   
   return (
     <div className='wrapper'>
-      <NavBar />
       <Router>
           <Routes>
             <Route exact path='/' Component={Main}/>

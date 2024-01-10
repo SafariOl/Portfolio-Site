@@ -34,12 +34,12 @@ export default function Work({titlePage, elem}) {
     }
     
     useLayoutEffect(() => {
-        const items = document.querySelectorAll('.work__block')
+        const items = document.querySelectorAll('.work__items__block')
         items.forEach((link, idx) => {
             if(idx == elem && elem !== null){
-                link.classList.add('active')
+                link.style.display = 'none'
             }else{
-                link.classList.remove('active')
+                link.style.display = 'block'
             }
         })
     })
